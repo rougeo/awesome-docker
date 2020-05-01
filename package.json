@@ -4,7 +4,9 @@
   "description": "A curated list of Docker resources and projects Inspired by @sindresorhus and improved by amazing contributors",
   "main": "build.js",
   "scripts": {
-    "build": "rimraf ./dist/ && node build.js"
+    "build": "rimraf ./dist/ && node build.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,8 @@
     "parcel-bundler": "1.10.3",
     "rimraf": "2.6.2",
     "showdown": "1.8.7",
-    "sitemap": "2.1.0"
+    "sitemap": "2.1.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
@@ -38,5 +41,6 @@
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-prettier": "3.0.0",
     "prettier": "1.14.3"
-  }
+  },
+  "snyk": true
 }
